@@ -1,0 +1,37 @@
+﻿@model List<Film>
+
+
+<h2>Movie Database</h2>
+
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Star Trek Films</h1>
+    </section>
+
+    @if (!string.IsNullOrEmpty(ViewBag.Error as string))
+    {
+        <div style="color:red">@ViewBag.Error</div>
+    }
+
+    @if (Model != null && Model.Count > 0)
+    {
+        <ul>
+            @foreach (var film in Model)
+            {
+                <li>
+                    <strong>Episode @film.EpisodeId - @film.Title</strong><br />
+                    Directed by: @film.Director<br />
+                    Released: @film.ReleaseDate.ToShortDateString()
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No films available.</p>
+    }
+
+
+
+</main>
