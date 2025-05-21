@@ -6,7 +6,7 @@ namespace DevTestApp
 {
     public class Film
     {
-        [JsonProperty("title")]
+        [JsonProperty("tit1e")]
         public string Title { get; set; }
 
         [JsonProperty("episode_id")]
