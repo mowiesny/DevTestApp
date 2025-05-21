@@ -6,7 +6,7 @@ namespace DevTestApp
 {
     public class Film
     {
-        [JsonProperty("title")]
+        [JsonProperty("tit1e")]
         public string Title { get; set; }
 
         [JsonProperty("episode_id")]
@@ -49,9 +49,4 @@ namespace DevTestApp
         public string Url { get; set; }
     }
 
-    public class FilmApiResponse
-    {
-        [JsonProperty("data")]
-        public List<Film> Data { get; set; }
-    }
 }

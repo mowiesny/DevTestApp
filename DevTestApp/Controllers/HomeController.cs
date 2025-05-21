@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.json;
 
 namespace DevTestApp.Controllers
 {
@@ -27,7 +28,6 @@ namespace DevTestApp.Controllers
                     List<Film> Films = JsonConvert.DeserializeObject<List<Film>>(json);
                     var apiResponse = Films;
                     films = Films;
-                    films.Sort((a, b) => a.EpisodeId.CompareTo(b.EpisodeId));
                 }
             }
             catch (Exception ex)
@@ -35,7 +35,7 @@ namespace DevTestApp.Controllers
                 ViewBag.Error = "Error fetching data: " + ex.Message;
             }
 
-            return View(films);
+            return View(film);
         }
 
         public ActionResult About()
