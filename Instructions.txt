@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+
+
+You are free to use Google to search if needed.
+
+You can use ChatGPT for help.  Just note that you did.
+
+Open the solution in Visual Studio.
+
+The application calls the following API for a list of SCI FI movies.
+
+The api is located at  https://swapi.info/api/films
+
+There are several issues that are stopping the program from compiling and running.
+
+Fix the errors in order to get it to compile without error.
+
+
+
+
+Once you get the website running, check the display of the movies.  The Title of the movie appears to not be loading.  Determine why the values are not being displayed.  
+
+You can get more information on the api from their site: https://swapi.info/films
+
+Once you get the title to display correctly, you need to sort the order of the films by the episode # instead of the year it was released.
+
+=======
+
+
+You are free to use Google to search if needed.
+
+You can use ChatGPT for help.  Just note that you did.
+
+Open the solution in Visual Studio.
+
+The application calls the following API for a list of SCI FI movies.
+
+The api is located at  https://swapi.info/api/films
+
+There are several issues that are stopping the program from compiling and running.
+
+Fix the errors in order to get it to compile without error.
+
+
+
+
+Once you get the website running, check the display of the movies.  The Title of the movie appears to not be loading.  Determine why the values are not being displayed.  
+
+You can get more information on the api from their site: https://swapi.info/films
+
+Once you get the title to display correctly, you need to sort the order of the films by the episode # instead of the year it was released.
+
+>>>>>>> b4ee3fc814369635fc311f3ee0fb12328659f02d
