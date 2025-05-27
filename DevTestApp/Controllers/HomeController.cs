@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.json;
+using System.Web.Management;
+using DevTestApp.Models;
 
 namespace DevTestApp.Controllers
 {
@@ -18,6 +20,7 @@ namespace DevTestApp.Controllers
         {
             string apiUrl = "https://swapi.info/api/films";
             List<Film> films = new List<Film>();
+            ViewBag.Message = webFormat("Movies Page");
 
             try
             {
