@@ -19,9 +19,7 @@ namespace DevTestApp.Controllers
         {
             string apiUrl = "https://swapi.info/api/films";
             List<Film> films = new List<Film>();
-            Utility utility = new Utility();
-            ViewBag.Message = utility.WebFormat("Movies Page");
-
+            ViewBag.Message = WebFormat("Movies Page");
             try
             {
                 var response = await client.GetAsync(apiUrl);

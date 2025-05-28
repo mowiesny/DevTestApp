@@ -7,9 +7,17 @@ namespace DevTestApp.Models
 {
     public class Utility
     {
-        public string WebFormat(string message)
+        public static string WebFormat(string message)
         {
             return $"<h1>{message}</h1>";
         }
+        public static string FormatDate(DateTime date)
+        {
+            return date.ToString("MMMM dd, yyyy");
+        }
+        public static string FormatCurrency(decimal amount)
+        {
+            return amount.ToString("C2");
+        }   
     }
 }
