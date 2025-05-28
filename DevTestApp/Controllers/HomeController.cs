@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.json;
 using System.Web.Management;
 using DevTestApp.Models;
 
@@ -20,7 +19,8 @@ namespace DevTestApp.Controllers
         {
             string apiUrl = "https://swapi.info/api/films";
             List<Film> films = new List<Film>();
-            ViewBag.Message = webFormat("Movies Page");
+            Utility utility = new Utility();
+            ViewBag.Message = utility.WebFormat("Movies Page");
 
             try
             {
@@ -30,7 +30,8 @@ namespace DevTestApp.Controllers
                     var json = await response.Content.ReadAsStringAsync();
                     List<Film> Films = JsonConvert.DeserializeObject<List<Film>>(json);
                     var apiResponse = Films;
-                    films = Films;
+                    films = Films.OrderBy(o => o.EpisodeId).ToList();
+
                 }
             }
             catch (Exception ex)
@@ -38,7 +39,7 @@ namespace DevTestApp.Controllers
                 ViewBag.Error = "Error fetching data: " + ex.Message;
             }
 
-            return View(film);
+            return View(films);
         }
 
         public ActionResult About()
