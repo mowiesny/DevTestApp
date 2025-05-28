@@ -20,7 +20,7 @@ namespace DevTestApp.Controllers
         {
             string apiUrl = "https://swapi.info/api/films";
             List<Film> films = new List<Film>();
-            ViewBag.Message = webFormat("Movies Page");
+            ViewBag.Message = WebFormat("Movies Page");
 
             try
             {
