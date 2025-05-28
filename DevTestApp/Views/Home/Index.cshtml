@@ -9,7 +9,7 @@
         <h1 id="title">Star Trek Films</h1>
     </section>
 
-    @if (!string.IsNullOrEmpty(ViewBag.Error as string))
+    @if (!string.IsNullOrEmpty(@ViewBag.Error as string))
     {
         <div style="color:red">@ViewBag.Error</div>
     }
@@ -17,7 +17,7 @@
     @if (Model != null && Model.Count > 0)
     {
         <ul>
-            @foreach (film in Model)
+            @foreach (var film in Model)
             {
                 <li>
                     <strong>Episode @film.EpisodeId - @film.Title</strong><br />
